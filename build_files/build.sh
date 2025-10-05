@@ -23,4 +23,9 @@ systemctl enable ydotool
 
 # ========== Papirus icons ==========
 # https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
-wget -qO- https://git.io/papirus-icon-theme-install | env DESTDIR="$HOME/.local/share/icons" sh
+wget -O papirus.tar.gz https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/master.tar.gz
+tar -xzf papirus.tar.gz -C papirus
+cp -R papirus/* /home/bazzite/.local/share/icons
+
+# ========== Prevent user-switching ==========
+patch < /ctx/multiuser.patch
