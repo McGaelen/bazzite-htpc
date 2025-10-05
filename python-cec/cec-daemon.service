@@ -1,0 +1,8 @@
+[Unit]
+Description=CEC Daemon
+
+[Service]
+ExecStart=/home/bazzite/python-cec/dist/main/main
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,1 @@
+to build: bin/pyinstaller --recursive-copy-metadata main.py|client.py

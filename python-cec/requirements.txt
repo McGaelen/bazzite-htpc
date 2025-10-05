@@ -1,0 +1,2 @@
+cec==0.2.8
+python-daemon==3.1.2
