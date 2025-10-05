@@ -20,13 +20,3 @@ systemctl enable keyd
 # ========== ydotool ==========
 # comes pre-installed on bazzite
 systemctl enable ydotool
-
-# ========== Papirus icons ==========
-# https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
-wget -O papirus.tar.gz https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/master.tar.gz
-mkdir papirus
-tar -xzf papirus.tar.gz -C papirus
-cp -R papirus/* /home/bazzite/.local/share/icons
-
-# ========== Prevent user-switching ==========
-patch < /ctx/multiuser.patch
