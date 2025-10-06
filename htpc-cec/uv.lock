@@ -1,0 +1,63 @@
+version = 1
+revision = 3
+requires-python = ">=3.13"
+
+[[package]]
+name = "cec"
+version = "0.2.8"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/9f/8f/a6a5facdc328562fda583e1278ad6e53605d91a1afc194777e309628f2c6/cec-0.2.8.tar.gz", hash = "sha256:81e59d85dffdd5552b9bec556779e97fb1d6bd120c7320c216c020743a46083a", size = 20316, upload-time = "2022-01-05T20:35:43.739Z" }
+
+[[package]]
+name = "htpc-cec"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "cec" },
+    { name = "posix-ipc" },
+    { name = "python-daemon" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "cec", specifier = ">=0.2.8" },
+    { name = "posix-ipc", specifier = ">=1.3.0" },
+    { name = "python-daemon", specifier = ">=3.1.2" },
+]
+
+[[package]]
+name = "lockfile"
+version = "0.12.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/17/47/72cb04a58a35ec495f96984dddb48232b551aafb95bde614605b754fe6f7/lockfile-0.12.2.tar.gz", hash = "sha256:6aed02de03cba24efabcd600b30540140634fc06cfa603822d508d5361e9f799", size = 20874, upload-time = "2015-11-25T18:29:58.279Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c8/22/9460e311f340cb62d26a38c419b1381b8593b0bb6b5d1f056938b086d362/lockfile-0.12.2-py2.py3-none-any.whl", hash = "sha256:6c3cb24f344923d30b2785d5ad75182c8ea7ac1b6171b08657258ec7429d50fa", size = 13564, upload-time = "2015-11-25T18:29:51.462Z" },
+]
+
+[[package]]
+name = "posix-ipc"
+version = "1.3.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/2b/a1/16d4b5a7dfc3dbb5965debe0415b6dc4866d4c94a1229f5b12cde7b78de8/posix_ipc-1.3.0.tar.gz", hash = "sha256:6e559ac5bb5f6f233c396103f4868e383bbd8f4e54d20876910896f47d353448", size = 98370, upload-time = "2025-07-29T20:03:45.17Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/eb/44/705b656e6ddbebe73d48d6f28d344ee3b6a0b6b2bbfc89b6867c5cab5a9d/posix_ipc-1.3.0-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:69bd807306d58ce3fedac1209ecaed3d0f14af276f28e347ea027afb89871dec", size = 11750, upload-time = "2025-07-29T20:02:57.804Z" },
+    { url = "https://files.pythonhosted.org/packages/13/2e/7a8c66684e6f74d7659ae05b9ea6b7faa32a5058a6d8f363bf3fcde741a1/posix_ipc-1.3.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:9eb933a59a81ce339c98d0a1931143d5b23e4f157c3c5427d3048aa3a52f7035", size = 12072, upload-time = "2025-07-29T20:02:58.519Z" },
+    { url = "https://files.pythonhosted.org/packages/89/99/b21c048dc7473fef4606685d6d0585f9beca15aa28d03e050578f5a6bde0/posix_ipc-1.3.0-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:399b0b5863541e56ee275a9ed979ceef61c2c2d806241d4979d0826f1e63b466", size = 50294, upload-time = "2025-07-29T20:02:59.261Z" },
+    { url = "https://files.pythonhosted.org/packages/eb/0a/b94336780ba9fb62473fbc20b86a5693ed187911e3a5d06316342cd1263c/posix_ipc-1.3.0-cp313-cp313-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:786adff8d726ca98b3625708985fde002f73029a5f424fec5aba70c96e0c6f23", size = 46598, upload-time = "2025-07-29T20:03:00.38Z" },
+    { url = "https://files.pythonhosted.org/packages/49/3b/fb802bc61a997c9e2398c23b88af86ff6ad137d39256bb9b2100a70a757a/posix_ipc-1.3.0-cp313-cp313-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:bcbf68dbeba7b8d79e56860ebc5b37923771e71baeea59d6211b48f5c3907c95", size = 51255, upload-time = "2025-07-29T20:03:01.205Z" },
+    { url = "https://files.pythonhosted.org/packages/e0/07/94988fe83bab4895f595e9147b5295446bbcd80d41c49abf492c40700622/posix_ipc-1.3.0-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:2ba7331b7aae98bed1d6b08d1ea1a6bee3f1e416f0d8cf8c70867813ed88f9f7", size = 49253, upload-time = "2025-07-29T20:03:02.138Z" },
+    { url = "https://files.pythonhosted.org/packages/89/d7/5fda2ca71ae3224d0251bdbe2013aa001acc5cd1c770dbcb54c8896a0fd1/posix_ipc-1.3.0-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:6dd2d1cbedd6fc837eb56f35dbb936375214b9766649537bdf44e28ee6ace558", size = 46377, upload-time = "2025-07-29T20:03:02.94Z" },
+    { url = "https://files.pythonhosted.org/packages/af/d0/c01767846a98f47ad329f8ea2315f808372f0c6d76e738c0b453e52187c9/posix_ipc-1.3.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:cc62ba1c25a2e9d6ea884be56b8d3a06faf5a6d01a5c127f9fdc3d4c34af16fa", size = 49556, upload-time = "2025-07-29T20:03:04.284Z" },
+]
+
+[[package]]
+name = "python-daemon"
+version = "3.1.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "lockfile" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/3d/37/4f10e37bdabc058a32989da2daf29e57dc59dbc5395497f3d36d5f5e2694/python_daemon-3.1.2.tar.gz", hash = "sha256:f7b04335adc473de877f5117e26d5f1142f4c9f7cd765408f0877757be5afbf4", size = 71576, upload-time = "2024-12-03T08:41:07.843Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/45/3c/b88167e2d6785c0e781ee5d498b07472aeb9b6765da3b19e7cc9e0813841/python_daemon-3.1.2-py3-none-any.whl", hash = "sha256:b906833cef63502994ad48e2eab213259ed9bb18d54fa8774dcba2ff7864cec6", size = 30872, upload-time = "2024-12-03T08:41:03.322Z" },
+]

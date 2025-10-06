@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+src/client/__main__.py
+src/daemon/__main__.py
+src/htpc_cec.egg-info/PKG-INFO
+src/htpc_cec.egg-info/SOURCES.txt
+src/htpc_cec.egg-info/dependency_links.txt
+src/htpc_cec.egg-info/requires.txt
+src/htpc_cec.egg-info/top_level.txt
+src/shared/Command.py
+src/shared/__init__.py
+src/shared/const.py
+src/shared/logger.py
