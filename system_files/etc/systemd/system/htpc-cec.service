@@ -2,7 +2,7 @@
 Description=CEC Daemon
 
 [Service]
-ExecStart=/home/bazzite/python-cec/dist/main/main
+ExecStart=python3 -m htpc-cec-daemon
 
 [Install]
 WantedBy=multi-user.target
