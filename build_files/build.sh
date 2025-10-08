@@ -21,5 +21,5 @@ systemctl enable ydotool
 
 # ========== htpc-cec ==========
 dnf5 -y install python3-devel libcec-devel
-pip install /ctx/htpc-cec/dist/htpc_cec-0.1.0-py3-none-any.whl
-systemctl enable htpc-cec
+# pip install /ctx/htpc-cec/dist/htpc_cec-0.1.0-py3-none-any.whl
+# systemctl enable htpc-cec
