@@ -1,7 +1,7 @@
 README.md
 pyproject.toml
-src/client/__main__.py
-src/daemon/__main__.py
+src/htpc-cec/__main__.py
+src/htpc-cec-daemon/__main__.py
 src/htpc_cec.egg-info/PKG-INFO
 src/htpc_cec.egg-info/SOURCES.txt
 src/htpc_cec.egg-info/dependency_links.txt

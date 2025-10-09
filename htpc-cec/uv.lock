@@ -11,7 +11,7 @@ sdist = { url = "https://files.pythonhosted.org/packages/9f/8f/a6a5facdc328562fd
 [[package]]
 name = "htpc-cec"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "cec" },
     { name = "posix-ipc" },

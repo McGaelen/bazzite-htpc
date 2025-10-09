@@ -14,5 +14,5 @@ dependencies = [
 #htpc-cec-daemon = "daemon:main"
 #htpc-cec = "client:main"
 
-#[tool.uv]
-#package = true
+[tool.uv]
+package = true
