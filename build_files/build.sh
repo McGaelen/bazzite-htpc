@@ -9,8 +9,6 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-dnf5 -y install patch
-
 # ========== keyd ==========
 dnf5 -y copr enable alternateved/keyd
 dnf5 -y install keyd
@@ -20,9 +18,6 @@ systemctl enable keyd
 # ========== ydotool ==========
 # comes pre-installed on bazzite
 systemctl enable ydotool
-
-# ========== Re-enable autologin, since we're not using bazzite-deck ==========
-patch /etc/sddm.conf < /ctx/sddm.conf.patch
 
 # ========== htpc-cec ==========
 dnf5 -y install python3-devel libcec-devel
