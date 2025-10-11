@@ -31,7 +31,7 @@ def main():
     signal.signal(signal.SIGTERM, cleanup)
     signal.signal(signal.SIGINT, cleanup)
 
-    def handleCommand(command: str):
+    def handle_command(command: str):
         match command:
             case Command.power_on:
                 tv.power_on()
@@ -50,12 +50,10 @@ def main():
             recv_bytes, _ = q.receive()
             recv_str = recv_bytes.decode()
             logger.debug(f"received: {recv_str}")
-            handleCommand(recv_str)
+            handle_command(recv_str)
         except posix_ipc.SignalError:
             # We get here if the program was terminated/ctrl+c'd while waiting for receive(), so just exit.
             exit()
-        except:
-            logger.exception("An unexpected error occured.")
 
 
 if __name__ == "__main__":

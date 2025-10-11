@@ -1,3 +1,15 @@
+# Bazzite HTPC
+
+## How to build
+
+First, make sure to build the python project within `htpc-cec/`, using the instructions in that project's readme. The OS image build requires that the `.whl` file is created so it can be installed during the build.
+
+Then just run `just build`.
+
+**The rest of this Readme is from the `ublue-os/image-template` repo.**
+
+---
+
 # image-template
 
 This repository is meant to be a template for building your own custom [bootc](https://github.com/bootc-dev/bootc) image. This template is the recommended way to make customizations to any image published by the Universal Blue Project.

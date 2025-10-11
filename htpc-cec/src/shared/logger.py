@@ -1,5 +1,4 @@
 import sys
-import logging
 import logging.handlers
 
 logger = logging.getLogger("CecDaemonLogger")
