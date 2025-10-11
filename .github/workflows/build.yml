@@ -50,7 +50,7 @@ jobs:
         uses: astral-sh/setup-uv@v6
 
       - name: Install htpc-cec deps
-        run: ./htpc-cec/install_distrobox_deps_ubuntu24.04.sh
+        run: ./htpc-cec/install_deps_ubuntu.sh
 
       - name: Build htpc-cec
         run: |
