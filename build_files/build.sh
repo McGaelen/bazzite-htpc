@@ -27,5 +27,6 @@ dnf5 -y install python3-devel libcec-devel
 # Not even usrlocal exists at this point, so we just create it so pip is happy.
 # As soon as I added this, `bootc container lint` started getting mad, and it's going to stay mad until I figure out the correct way to do this.
 mkdir -p /var/usrlocal/lib64
-pip install /ctx/htpc_cec-0.1.0-py3-none-any.whl
+cp /ctx/htpc_cec-0.1.0-py3-none-any.whl /
+#pip install /ctx/htpc_cec-0.1.0-py3-none-any.whl
 systemctl enable htpc-cec
