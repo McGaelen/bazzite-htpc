@@ -20,13 +20,6 @@ systemctl enable keyd
 systemctl enable ydotool
 
 # ========== htpc-cec ==========
-dnf5 -y install python3-devel libcec-devel
-# pip needs to install things in /usr/local/lib64.
-# But this directory doesn't exist at this point in the build (I have no idea when/who creates it.)
-# According to https://www.bootc-dev.github.io/bootc/filsystem.html#usrlocal, the /usr/local directory is symlinked to /var/usrlocal.
-# Not even usrlocal exists at this point, so we just create it so pip is happy.
-# As soon as I added this, `bootc container lint` started getting mad, and it's going to stay mad until I figure out the correct way to do this.
-mkdir -p /var/usrlocal/lib64
-cp /ctx/htpc_cec-0.1.0-py3-none-any.whl /
-#pip install /ctx/htpc_cec-0.1.0-py3-none-any.whl
+cp /ctx/htpc-cec /usr/bin
+cp /ctx/htpc-cecd /usr/bin
 systemctl enable htpc-cec

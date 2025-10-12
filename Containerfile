@@ -1,7 +1,6 @@
 # Allow build scripts to be referenced without being copied into the final image
 FROM scratch AS ctx
 COPY build_files /
-COPY htpc-cec/dist/htpc_cec-0.1.0-py3-none-any.whl /
 
 # Base Image
 FROM ghcr.io/ublue-os/bazzite:stable

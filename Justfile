@@ -85,19 +85,23 @@ sudoif command *args:
 # This will build an image 'aurora:lts' with DX and GDX enabled.
 #
 
+#
+build-htpc-cec:
+    #!/usr/bin/env bash
+    cd htpc-cec
+    uv run pyinstaller --onefile --name htpc-cec src/htpc-cec/__main__.py
+    uv run pyinstaller --onefile --name htpc-cecd src/htpc-cec-daemon/__main__.py
+    cp dist/htpc-cec ../build_files
+    cp dist/htpc-cecd ../build_files
+
 # Build the image using the specified parameters
-build $target_image=image_name $tag=default_tag:
+build $target_image=image_name $tag=default_tag: build-htpc-cec
     #!/usr/bin/env bash
 
     BUILD_ARGS=()
     if [[ -z "$(git status -s)" ]]; then
         BUILD_ARGS+=("--build-arg" "SHA_HEAD_SHORT=$(git rev-parse --short HEAD)")
     fi
-
-    # First build htpc-cec
-    cd htpc-cec
-    uv build --out-dir ../build_files
-    cd ..
 
     podman build \
         "${BUILD_ARGS[@]}" \

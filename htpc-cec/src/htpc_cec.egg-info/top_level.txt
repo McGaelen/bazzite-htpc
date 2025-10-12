@@ -1,3 +1,0 @@
-htpc-cec
-htpc-cec-daemon
-shared
