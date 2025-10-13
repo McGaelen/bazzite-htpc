@@ -21,7 +21,6 @@ exe = EXE(
     a.scripts,
     a.binaries,
     a.datas,
-    [('v', None, 'OPTION')],
     name='htpc-cec',
     debug=False,
     bootloader_ignore_signals=False,

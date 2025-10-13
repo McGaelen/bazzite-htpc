@@ -2,7 +2,7 @@
 Description=CEC Daemon
 
 [Service]
-ExecStart=python3 -m htpc-cec-daemon
+ExecStart=htpc-cecd
 
 [Install]
 WantedBy=multi-user.target

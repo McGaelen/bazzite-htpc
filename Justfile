@@ -90,8 +90,8 @@ build-htpc-cec:
     #!/usr/bin/env bash
     pwd
     cd htpc-cec
-    uv run pyinstaller htpc-cec.spec
-    uv run pyinstaller htpc-cecd.spec
+    uv run pyinstaller --clean htpc-cec.spec
+    uv run pyinstaller --clean htpc-cecd.spec
     cp dist/htpc-cec ../build_files
     cp dist/htpc-cecd ../build_files
 
