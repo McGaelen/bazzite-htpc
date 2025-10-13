@@ -89,8 +89,8 @@ sudoif command *args:
 build-htpc-cec:
     #!/usr/bin/env bash
     cd htpc-cec
-    uv run pyinstaller --onefile --name htpc-cec src/htpc-cec/__main__.py
-    uv run pyinstaller --onefile --name htpc-cecd src/htpc-cec-daemon/__main__.py
+    uv run pyinstaller --onefile --name htpc-cec --debug=imports --hidden-import shared src/htpc-cec/__main__.py
+    uv run pyinstaller --onefile --name htpc-cecd --debug=imports --hidden-import shared src/htpc-cec-daemon/__main__.py
     cp dist/htpc-cec ../build_files
     cp dist/htpc-cecd ../build_files
 

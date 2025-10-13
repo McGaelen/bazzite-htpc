@@ -6,6 +6,12 @@ First, make sure to build the python project within `htpc-cec/`, using the instr
 
 Then just run `just build`.
 
+
+## TODO
+- fix htpc command not working
+- don't run steam at startup
+- a fullscreen launcher that has a list of webapps you can choose to launch, as well as a normal browser, and ability to add new apps
+
 **The rest of this Readme is from the `ublue-os/image-template` repo.**
 
 ---
