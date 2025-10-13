@@ -3,10 +3,10 @@
 
 a = Analysis(
     ['src/htpc-cec/__main__.py'],
-    pathex=[],
+    pathex=['src'],
     binaries=[],
     datas=[],
-    hiddenimports=['shared'],
+    hiddenimports=[],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],

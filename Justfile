@@ -85,12 +85,13 @@ sudoif command *args:
 # This will build an image 'aurora:lts' with DX and GDX enabled.
 #
 
-#
+[working-directory: 'htpc-cec']
 build-htpc-cec:
     #!/usr/bin/env bash
+    pwd
     cd htpc-cec
-    uv run pyinstaller --onefile --name htpc-cec --debug=imports --hidden-import shared src/htpc-cec/__main__.py
-    uv run pyinstaller --onefile --name htpc-cecd --debug=imports --hidden-import shared src/htpc-cec-daemon/__main__.py
+    uv run pyinstaller htpc-cec.spec
+    uv run pyinstaller htpc-cecd.spec
     cp dist/htpc-cec ../build_files
     cp dist/htpc-cecd ../build_files
 
