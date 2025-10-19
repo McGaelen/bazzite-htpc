@@ -23,3 +23,6 @@ systemctl enable ydotool
 cp /ctx/htpc-cec /usr/bin
 cp /ctx/htpc-cecd /usr/bin
 systemctl enable htpc-cec
+
+# ========== disable steam from starting up automatically ==========
+mv /etc/xdg/autostart/steam.desktop /etc/xdg/autostart/steam.desktop.DISABLED
