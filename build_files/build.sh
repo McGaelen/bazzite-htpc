@@ -9,6 +9,9 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
+# ========== cage compositor ==========
+dnf5 -y install cage
+
 # ========== keyd ==========
 dnf5 -y copr enable alternateved/keyd
 dnf5 -y install keyd
@@ -16,13 +19,10 @@ dnf5 -y copr disable alternateved/keyd
 systemctl enable keyd
 
 # ========== ydotool ==========
-# comes pre-installed on bazzite
+dnf5 -y install ydotool
 systemctl enable ydotool
 
 # ========== htpc-cec ==========
 cp /ctx/htpc-cec /usr/bin
 cp /ctx/htpc-cecd /usr/bin
 systemctl enable htpc-cec
-
-# ========== disable steam from starting up automatically ==========
-mv /etc/xdg/autostart/steam.desktop /etc/xdg/autostart/steam.desktop.DISABLED
