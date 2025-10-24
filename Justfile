@@ -96,7 +96,7 @@ build-htpc-cec:
     cp dist/htpc-cecd ../build_files
 
 # Build the image using the specified parameters
-build $target_image=image_name $tag=default_tag: build-htpc-cec
+build $target_image=image_name $tag=default_tag: build-htpc-cec clean-firefox-profile
     #!/usr/bin/env bash
 
     BUILD_ARGS=()
@@ -107,6 +107,7 @@ build $target_image=image_name $tag=default_tag: build-htpc-cec
     podman build \
         "${BUILD_ARGS[@]}" \
         --pull=newer \
+        --no-cache \
         --tag "${target_image}:${tag}" \
         .
 
@@ -327,3 +328,11 @@ format:
     fi
     # Run shfmt on all Bash scripts
     /usr/bin/find . -iname "*.sh" -type f -exec shfmt --write "{}" ';'
+
+# Reads the gitignore in the firefox profile, and deletes everything listed in the file.
+# This needs to run before the build - otherwise all those files will be copied into the build,
+# which could cause firefox to error on startup because of a lockfile being present.
+[working-directory: 'system_files/usr/share/factory/var/firefox-profile']
+clean-firefox-profile:
+    #!/usr/bin/env bash
+    cat .gitignore | xargs rm -rf

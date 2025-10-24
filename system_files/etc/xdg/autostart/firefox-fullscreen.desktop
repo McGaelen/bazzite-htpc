@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=firefox --file-forwarding org.mozilla.firefox --kiosk @@u %u @@
+Exec=firefox --kiosk --profile /var/firefox-profile
 Terminal=false
 X-MultipleArgs=false
 Icon=org.mozilla.firefox
