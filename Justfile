@@ -88,12 +88,10 @@ sudoif command *args:
 [working-directory: 'htpc-cec']
 build-htpc-cec:
     #!/usr/bin/env bash
-    pwd
-    cd htpc-cec
-    uv run pyinstaller --clean htpc-cec.spec
-    uv run pyinstaller --clean htpc-cecd.spec
-    cp dist/htpc-cec ../build_files
-    cp dist/htpc-cecd ../build_files
+    uv run pyinstaller htpc-cec.spec
+    uv run pyinstaller htpc-cecd.spec
+    cp dist/htpc-cec ../system_files/usr/bin
+    cp dist/htpc-cecd ../system_files/usr/bin
 
 # Build the image using the specified parameters
 build $target_image=image_name $tag=default_tag: build-htpc-cec clean-firefox-profile

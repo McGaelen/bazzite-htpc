@@ -22,6 +22,4 @@ dnf5 -y install ydotool
 systemctl enable ydotool
 
 # ========== htpc-cec ==========
-cp /ctx/htpc-cec /usr/bin
-cp /ctx/htpc-cecd /usr/bin
 systemctl enable htpc-cec
