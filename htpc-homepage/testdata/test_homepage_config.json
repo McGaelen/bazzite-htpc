@@ -1,0 +1,19 @@
+{
+  "links": [
+    {
+      "url": "https://www.youtube.com",
+      "name": "YouTube",
+      "faviconUrl": "https://www.youtube.com/s/desktop/ab67e92c/img/favicon.ico"
+    },
+    {
+      "url": "https://www.twitch.tv",
+      "name": "Twitch",
+      "faviconUrl": "https://assets.twitch.tv/assets/favicon-16-52e571ffea063af7a7f4.png"
+    },
+    {
+      "url": "https://www.netflix.com",
+      "name": "Netflix",
+      "faviconUrl": "https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.png"
+    }
+  ]
+}
