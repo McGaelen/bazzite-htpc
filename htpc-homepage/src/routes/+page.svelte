@@ -1,17 +1,18 @@
 <script lang="ts">
   import * as Item from '$lib/components/ui/item/index.js'
-  import type { PageProps } from './$types'
+  import { getConfig } from './config.remote'
+  import { cn } from '$lib/utils'
 
-  let { data }: PageProps = $props()
+  const config = await getConfig()
 </script>
 
 <div class="h-screen w-screen" style="padding: 100px calc(100vw / 7);">
   <Item.Group class="grid grid-cols-3 gap-4">
-    {#each data.config.links as model (model.name)}
-      <div class="m-auto flex max-w-[200px] flex-wrap">
-        <Item.Root variant="default" class="items-center">
+    {#each config.links as model (model.name)}
+      <div class=" flex h-full w-full flex-wrap items-center justify-center">
+        <Item.Root variant="default" class="">
           {#snippet child({ props })}
-            <a href={model.url} {...props}>
+            <a href={model.url} {...props} class={cn(props.class, 'h-full w-[250px]')}>
               <Item.Header>
                 <img
                   src={model.faviconUrl}
@@ -22,12 +23,15 @@
                 />
               </Item.Header>
               <Item.Content>
-                <Item.Title>{model.name}</Item.Title>
+                <Item.Title class="text-2xl">{model.name}</Item.Title>
               </Item.Content>
             </a>
           {/snippet}
         </Item.Root>
       </div>
     {/each}
+    <a href="http://about:settings">settings</a>
+    <!-- Add a website -->
+    <!-- Firefox settings -->
   </Item.Group>
 </div>

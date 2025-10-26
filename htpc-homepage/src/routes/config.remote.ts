@@ -1,8 +1,8 @@
-import type { PageServerLoad } from './$types'
-import { file, $ } from 'bun'
+import { query } from '$app/server'
+import { file } from 'bun'
 import { env } from '$env/dynamic/private'
 
-export const load: PageServerLoad = async () => {
+export const getConfig = query(async () => {
   let config: App.HomepageConfig = {
     links: [],
   }
@@ -13,7 +13,5 @@ export const load: PageServerLoad = async () => {
     console.error(e)
   }
 
-  return {
-    config,
-  }
-}
+  return config
+})

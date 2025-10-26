@@ -1,3 +1,11 @@
+# TODO
+- [x] init basic interface
+- [ ] add sites, automatically get favicon and title using PWA manifest or links in <head>
+- [ ] delete sites
+- [ ] arrow keys to move around
+- [ ] create config file if not present
+- [ ] build and deploy in container image
+
 # sv
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
