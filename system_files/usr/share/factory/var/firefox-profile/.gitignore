@@ -15,6 +15,7 @@ security_state/
 sessionstore-backups/
 startupCache/
 storage/
+thumbnails/
 .parentlock
 4cdb9046.sqlite
 4cdb9046.sqlite-shm
@@ -41,6 +42,7 @@ formhistory.sqlite
 handlers.json
 key4.db
 lock
+notificationstore.json
 logins.json
 permissions.sqlite
 pkcs11.txt
@@ -48,7 +50,7 @@ places.sqlite
 places.sqlite-shm
 places.sqlite-wal
 protections.sqlite
-search.json.mozlz4
+serviceworker.txt
 sessionCheckpoints.json
 sessionstore.jsonlz4
 shield-preference-experiments.json

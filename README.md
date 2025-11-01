@@ -3,8 +3,10 @@
 ## TODO
 - [x] write htpc-cec program and daemon to control TVs using libcec
 - [x] run firefox fullscreen at startup with custom profile
-- [ ] don't run steam at startup
-- [ ] make a website chooser with settings to add a site (using flask?)
+- [x] don't run steam at startup (switch to non-bazzite image)
+- [ ] make a website chooser with settings to add a site
+- [ ] prevent new tabs from opening in firefox
+- [ ] prevent desktop from showing up briefly during startup
 
 ## How to build
 
